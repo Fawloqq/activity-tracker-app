@@ -12,14 +12,32 @@ Track your activities, stop them, and see how much time you spent on each task, 
 - Dashboard shows statistics: active count, stopped count, and average time
 - Color-coded statuses and icons for better visualization
 
-## Screenshots
+## Requirements
+- Python 3.9 or newer
+- Flask 2.2 or newer
+- Flask-SQLAlchemy 3.0 or newer
 
-![Screenshot](assets/screenshot.png)
+# Installation
+## MacOS
 
-## Installation
+***1. install the required tools***
+```bash
+brew install python3
 
-1. Clone the repository:
+pip install Flask Flask-SQLAlchemy
+```
+## Windows
+```bash
+winget install Python.Python.3.14
+
+pip install Flask Flask-SQLAlchemy
+```
+
+***2. Clone the repository and run project:***
 
 ```bash
 git clone https://github.com/Fawloqq/activity-tracker-app.git
-cd activity-tracker-app
+
+cd activity-tracker-app/src/main.py
+
+python3 run main.py

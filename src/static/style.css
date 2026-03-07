@@ -1,143 +1,194 @@
-/* Ogólne tło i font */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(120deg, #f6d365, #fda085);
-  margin: 0;
-  padding: 0;
-  color: #2c3e50;
+body{
+margin:0;
+font-family:Segoe UI;
+background:#f1f4fb;
 }
 
-/* Główny kontener */
-.container {
-  width: 700px;
-  max-width: 95%;
-  margin: 50px auto;
-  background-color: #ffffffdd;
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* topbar */
+
+.topbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 40px;
+
+background:#6366f1;
+color:white;
+
 }
 
-/* Nagłówki */
-h1, h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: 700;
+.logo{
+font-weight:600;
+font-size:18px;
 }
 
-h1 {
-  color: #e67e22;
+/* tabs */
+
+.tabs button{
+
+background:none;
+border:none;
+color:white;
+margin-left:20px;
+cursor:pointer;
+font-size:15px;
+padding:6px 10px;
+
 }
 
-h2 {
-  color: #2980b9;
+.tabs button.active{
+border-bottom:2px solid white;
 }
 
-/* Formularz dodawania aktywności */
-.add-form {
-  text-align: center;
-  margin-bottom: 30px;
+/* layout */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:30px;
 }
 
-.add-form input {
-  padding: 12px;
-  width: 60%;
-  margin-right: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+/* cards */
+
+.card{
+
+background:white;
+padding:25px;
+border-radius:12px;
+margin-bottom:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+
 }
 
-.add-form button {
-  padding: 12px 20px;
-  border: none;
-  background-color: #27ae60;
-  color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+/* stats cards */
+
+.cards{
+
+display:flex;
+gap:20px;
+margin-bottom:25px;
+
 }
 
-.add-form button:hover {
-  background-color: #2ecc71;
-  transform: scale(1.05);
+.stat{
+
+flex:1;
+text-align:center;
+
 }
 
-/* Lista aktywności */
-.activity-list {
-  list-style: none;
-  padding: 0;
+.stat i{
+font-size:22px;
+color:#6366f1;
 }
 
-.activity-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 15px;
-  margin: 8px 0;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: 0.2s;
+/* form */
+
+form{
+display:flex;
+gap:10px;
 }
 
-/* Active */
-.activity-list li span {
-  color: #34495e;
+input{
+
+flex:1;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+
 }
 
-.activity-list li:hover {
-  transform: translateX(3px);
+button{
+
+background:#6366f1;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+
 }
 
-.activity-list li a {
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  transition: 0.3s;
+/* filters */
+
+.filters{
+margin-bottom:20px;
 }
 
-/* Stop button - Active tasks */
-.stop-btn {
-  background-color: #e74c3c;
+.filters a{
+margin-right:15px;
+text-decoration:none;
+color:#6366f1;
+font-weight:600;
 }
 
-.stop-btn:hover {
-  background-color: #c0392b;
+/* table */
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
 }
 
-/* Time button - Stopped tasks */
-.time-btn {
-  background-color: #3498db;
+th,td{
+
+padding:12px;
+border-bottom:1px solid #eee;
+
 }
 
-.time-btn:hover {
-  background-color: #2980b9;
+tr:hover{
+background:#f7f8ff;
 }
 
-/* Stopped tasks style */
-.activity-list.stopped li {
-  background-color: #f1f2f6;
-  color: #7f8c8d;
+/* badges */
+
+.badge{
+
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+
 }
 
-/* Responsywność */
-@media (max-width: 800px) {
-  .container {
-    width: 90%;
-    padding: 20px;
-  }
+.running{
 
-  .add-form input {
-    width: 55%;
-    margin-bottom: 10px;
-  }
+background:#fff3cd;
+color:#856404;
 
-  .add-form button {
-    width: 40%;
-  }
+}
+
+.finished{
+
+background:#d4edda;
+color:#155724;
+
+}
+
+/* icons */
+
+.icon{
+margin-left:10px;
+}
+
+.stop-btn{
+color:orange;
+}
+
+.delete-btn{
+color:red;
+}
+
+/* tabs content */
+
+.tabcontent{
+display:none;
+}
+
+.tabcontent.active{
+display:block;
 }
